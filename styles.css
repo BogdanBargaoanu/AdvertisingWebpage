@@ -3,6 +3,7 @@
     --navbar-color2: #7f8c8d;
     --text-color1: #131313;
     --description-color: #aaaaaa;
+    --button-pressed-color: #696969;
 }
 
 html {
@@ -13,6 +14,10 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 #navbar {
@@ -38,14 +43,15 @@ html {
 
 .nav-list li {
     padding-right: 1.5rem;
-    transition: text-shadow 0.5s ease-in-out 0ms;
+    transition: transform 0.5s ease-in-out 0ms;
 }
 
 .nav-list li:hover {
-    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transform: translate(0, -10px);
 }
 
-#despre-noi, #title {
+#despre-noi,
+#title {
     padding-top: 6rem;
     margin-top: 3rem;
 }
@@ -87,7 +93,8 @@ section {
     grid-gap: 4rem;
 }
 
-#despre-noi p, #contact p {
+#despre-noi p,
+#contact p {
     font-size: 1.5rem;
     padding: 1rem;
     margin-left: 3rem;
@@ -127,7 +134,7 @@ section {
     transform: scale(1.1);
 }
 
-.image-container-servicii img{
+.image-container-servicii img {
     width: 60%;
 }
 
@@ -146,10 +153,18 @@ section {
     font-size: 2rem;
 }
 
-.facebook-link, .instagram-link, .email-link, .whatsapp-link {
+.facebook-link,
+.instagram-link,
+.email-link,
+.whatsapp-link {
+    margin: 1rem;
     transition: transform 0.5s ease-in-out 0ms;
 }
-.facebook-link:hover, .instagram-link:hover, .whatsapp-link:hover, .email-link:hover{
+
+.facebook-link:hover,
+.instagram-link:hover,
+.whatsapp-link:hover,
+.email-link:hover {
     transform: translate(0, -10px);
 }
 
@@ -158,6 +173,7 @@ section {
     flex-direction: row;
     justify-content: center;
     margin: 5rem 0 5rem 0;
+    flex-wrap: wrap;
 }
 
 .telefon-button {
@@ -171,13 +187,68 @@ section {
     transition: transform 0.5s ease-in-out 0ms;
 }
 
+.telefon-button:hover {
+    background-color: var(--navbar-color2);
+    transform: translate(0, -10px);
+}
+
+.telefon-button:active {
+    background-color: var(--button-pressed-color);
+}
+
 @media screen and (max-width: 1000px) {
     .image-container {
         grid-template-columns: 1fr;
     }
 
-    #despre-noi p {
+    .image-container-servicii {
+        grid-template-columns: 2fr;
+        grid-template-rows: 3fr;
+    }
+
+    #despre-noi p,
+    #contact p {
         margin-left: 1rem;
         margin-right: 1rem;
     }
+}
+
+footer {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: var(--navbar-color1);
+    background-image: linear-gradient(315deg, var(--navbar-color2) 0%, var(--navbar-color1) 74%);
+}
+
+.footer-text {
+    text-shadow: none;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes slide-up-fade-in {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+#li1 {
+    animation: slide-up-fade-in 0.5s ease;
+}
+
+#li2 {
+    animation: slide-up-fade-in 1s ease;
+}
+
+#li3 {
+    animation: slide-up-fade-in 1.5s ease;
 }
