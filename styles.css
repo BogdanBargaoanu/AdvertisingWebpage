@@ -268,3 +268,7 @@ footer {
     padding: 0;
     text-shadow: none;
 }
+
+.red {
+    color: red;
+}
