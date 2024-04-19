@@ -2,6 +2,7 @@
     --navbar-color1: #d3d3d3;
     --navbar-color2: #7f8c8d;
     --text-color1: #131313;
+    --description-color: #aaaaaa;
 }
 
 html {
@@ -44,9 +45,14 @@ html {
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-#despre-noi {
+#despre-noi, #title {
     padding-top: 6rem;
     margin-top: 3rem;
+}
+
+#title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
 }
 
 a {
@@ -56,10 +62,16 @@ a {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--description-color);
 }
 
 section {
@@ -95,6 +107,30 @@ section {
 .image-box small {
     padding: 1rem 0 1rem 0;
 }
+
+.last-paragraph {
+    margin-bottom: 3.5rem;
+}
+
+.image-container-servicii {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.image-box-servicii {
+    transition: transform 0.5s ease-in-out 0ms;
+}
+
+.image-box-servicii:hover {
+    transform: scale(1.1);
+}
+
+.image-container-servicii img{
+    width: 60%;
+}
+
 
 @media screen and (max-width: 1000px) {
     .image-container {
