@@ -87,7 +87,7 @@ section {
     grid-gap: 4rem;
 }
 
-#despre-noi p {
+#despre-noi p, #contact p {
     font-size: 1.5rem;
     padding: 1rem;
     margin-left: 3rem;
@@ -131,6 +131,45 @@ section {
     width: 60%;
 }
 
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+#contact a {
+    color: var(--text-color1);
+    text-decoration: none;
+    padding-right: 1.2rem;
+    font-size: 2rem;
+}
+
+.facebook-link, .instagram-link, .email-link, .whatsapp-link {
+    transition: transform 0.5s ease-in-out 0ms;
+}
+.facebook-link:hover, .instagram-link:hover, .whatsapp-link:hover, .email-link:hover{
+    transform: translate(0, -10px);
+}
+
+.telefon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5rem 0 5rem 0;
+}
+
+.telefon-button {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: var(--navbar-color1);
+    color: var(--text-color1);
+    border: 1px solid var(--text-color1);
+    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out 0ms;
+}
 
 @media screen and (max-width: 1000px) {
     .image-container {
