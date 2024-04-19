@@ -105,6 +105,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 1rem;
 }
 
 .image-box img {
@@ -241,14 +242,22 @@ footer {
 }
 
 
-#li1 {
+#li1,
+#li2,
+#li3,
+#title,
+#info {
     animation: slide-up-fade-in 0.5s ease;
 }
 
-#li2 {
+#despre-noi {
     animation: slide-up-fade-in 1s ease;
 }
 
-#li3 {
+#servicii {
     animation: slide-up-fade-in 1.5s ease;
+}
+
+#contact {
+    animation: slide-up-fade-in 2s ease;
 }
