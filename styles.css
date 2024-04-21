@@ -143,9 +143,6 @@ section {
     transform: scale(1.1);
 }
 
-.image-container-servicii img {
-}
-
 .links {
     display: flex;
     flex-direction: row;
