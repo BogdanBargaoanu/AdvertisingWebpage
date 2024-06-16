@@ -130,6 +130,10 @@ section {
     margin-bottom: 3.5rem;
 }
 
+.last-paragraph-reverse {
+    margin-bottom: -2rem;
+}
+
 .image-container-servicii {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -285,6 +289,7 @@ footer {
 }
 
 #servicii {
+    padding-top: 5.5rem;
     animation: slide-up-fade-in 1.5s ease;
 }
 
